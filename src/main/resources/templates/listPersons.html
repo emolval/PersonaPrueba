@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Personas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Personas</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="p : ${list}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.surname}"></td>
+            <td th:text="${p.sex}"></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
